@@ -1,0 +1,19 @@
+{
+    "name": "oskargunther/mailer-interface",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Oskar Gunther",
+            "email": "o.gunther@consultia.pl"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mailer\\": "src"
+        }
+    }
+}
