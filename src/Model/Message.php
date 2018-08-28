@@ -69,21 +69,12 @@ class Message
      * @param EmailAddress $from
      * @param Attachment[] $attachments
      */
-    public function __construct(
-        array $to = [],
-        array $bcc = [],
-        array $cc = [],
-        $subject = '',
-        EmailAddress $from = null,
-        array $attachments = []
-    )
+    public function __construct()
     {
-        $this->to = $to;
-        $this->bcc = $bcc;
-        $this->cc = $cc;
-        $this->subject = $subject;
-        $this->from = $from;
-        $this->attachments = $attachments;
+        $this->to = [];
+        $this->bcc = [];
+        $this->cc = [];
+        $this->attachments = [];
     }
 
 
