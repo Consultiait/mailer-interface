@@ -17,6 +17,12 @@ class EmailAddress
     /** @var string */
     private $name;
 
+    public function __construct($address, $name = '')
+    {
+        $this->address = $address;
+        $this->name = $name;
+    }
+
     /**
      * @return string
      */

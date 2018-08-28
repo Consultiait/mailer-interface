@@ -32,6 +32,9 @@ class Message
     /** @var string[]|string */
     private $tags;
 
+    /** @var Content[] */
+    private $contents;
+
     /**
      * Message constructor.
      * @param EmailAddress[] $to
@@ -107,12 +110,9 @@ class Message
         return $this->from;
     }
 
-    /**
-     * @param EmailAddress $from
-     */
-    public function setFrom(EmailAddress $from)
+    public function setFrom($address, $name = '')
     {
-        $this->from = $from;
+        $this->to[] = new EmailAddress($address, $name);
     }
 
     /**
@@ -136,23 +136,33 @@ class Message
         $this->tags[] = $tag;
     }
 
-    public function addTo(EmailAddress $emailAddress)
+    public function addTo($address, $name = '')
     {
-        $this->to[] = $emailAddress;
+        $this->to[] = new EmailAddress($address, $name);
     }
 
-    public function addBcc(EmailAddress $emailAddress)
+    public function addBcc($address, $name = '')
     {
-        $this->bcc[] = $emailAddress;
+        $this->to[] = new EmailAddress($address, $name);
     }
 
-    public function addCc(EmailAddress $emailAddress)
+    public function addCc($address, $name = '')
     {
-        $this->cc[] = $emailAddress;
+        $this->to[] = new EmailAddress($address, $name);
     }
 
     public function addAttachment(Attachment $attachment)
     {
         $this->attachments[] = $attachment;
+    }
+
+    public function getContents()
+    {
+        return $this->contents;
+    }
+
+    public function addContent($value, $type)
+    {
+        $this->contents[] = new Content($value, $type);
     }
 }
