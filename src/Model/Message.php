@@ -9,30 +9,52 @@
 namespace Mailer\Model;
 
 
+use JMS\Serializer\Annotation as Serializer;
+
 class Message
 {
-    /** @var EmailAddress[] */
+    /**
+     * @var EmailAddress[]
+     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     */
     private $to;
 
-    /** @var EmailAddress[] */
+    /**
+     * @var EmailAddress[]
+     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     */
     private $bcc;
 
-    /** @var EmailAddress[] */
+    /**
+     * @var EmailAddress[]
+     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     */
     private $cc;
 
     /** @var string */
     private $subject;
 
-    /** @var EmailAddress */
+    /**
+     * @Serializer\Type("\Mailer\Model\EmailAddress")
+     */
     private $from;
 
-    /** @var Attachment[] */
+    /**
+     * @var Attachment[]
+     * @Serializer\Type("array<\Mailer\Model\Attachment>")
+     */
     private $attachments;
 
-    /** @var string[]|string */
+    /**
+     * @var string[]
+     * @Serializer\Type("array<string>")
+     */
     private $tags;
 
-    /** @var Content[] */
+    /**
+     * @var Content[]
+     * @Serializer\Type("array<\Mailer\Model\Content>")
+     */
     private $contents;
 
     /**

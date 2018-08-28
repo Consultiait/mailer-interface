@@ -15,5 +15,8 @@
         "psr-4": {
             "Mailer\\": "src"
         }
+    },
+    "require-dev": {
+        "jms/serializer-bundle": "^2.4"
     }
 }
