@@ -68,14 +68,6 @@ class Message
     }
 
     /**
-     * @param EmailAddress[] $to
-     */
-    public function setTo($to)
-    {
-        $this->to = $to;
-    }
-
-    /**
      * @return EmailAddress[]
      */
     public function getBcc()
@@ -84,27 +76,11 @@ class Message
     }
 
     /**
-     * @param EmailAddress[] $bcc
-     */
-    public function setBcc($bcc)
-    {
-        $this->bcc = $bcc;
-    }
-
-    /**
      * @return EmailAddress[]
      */
     public function getCc()
     {
         return $this->cc;
-    }
-
-    /**
-     * @param EmailAddress[] $cc
-     */
-    public function setCc($cc)
-    {
-        $this->cc = $cc;
     }
 
     /**
@@ -134,7 +110,7 @@ class Message
     /**
      * @param EmailAddress $from
      */
-    public function setFrom($from)
+    public function setFrom(EmailAddress $from)
     {
         $this->from = $from;
     }
@@ -148,14 +124,6 @@ class Message
     }
 
     /**
-     * @param Attachment[] $attachments
-     */
-    public function setAttachments($attachments)
-    {
-        $this->attachments = $attachments;
-    }
-
-    /**
      * @return string|string[]
      */
     public function getTags()
@@ -163,12 +131,28 @@ class Message
         return $this->tags;
     }
 
-    /**
-     * @param string|string[] $tags
-     */
-    public function setTags($tags)
+    public function addTag($tag)
     {
-        $this->tags = $tags;
+        $this->tags[] = $tag;
     }
 
+    public function addTo(EmailAddress $emailAddress)
+    {
+        $this->to[] = $emailAddress;
+    }
+
+    public function addBcc(EmailAddress $emailAddress)
+    {
+        $this->bcc[] = $emailAddress;
+    }
+
+    public function addCc(EmailAddress $emailAddress)
+    {
+        $this->cc[] = $emailAddress;
+    }
+
+    public function addAttachment(Attachment $attachment)
+    {
+        $this->attachments[] = $attachment;
+    }
 }
