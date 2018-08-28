@@ -29,8 +29,8 @@ class Message
     /** @var Attachment[] */
     private $attachments;
 
-    /** @var string */
-    private $customId;
+    /** @var string[]|string */
+    private $tags;
 
     /**
      * Message constructor.
@@ -156,19 +156,19 @@ class Message
     }
 
     /**
-     * @return string
+     * @return string|string[]
      */
-    public function getCustomId()
+    public function getTags()
     {
-        return $this->customId;
+        return $this->tags;
     }
 
     /**
-     * @param string $customId
+     * @param string|string[] $tags
      */
-    public function setCustomId($customId)
+    public function setTags($tags)
     {
-        $this->customId = $customId;
+        $this->tags = $tags;
     }
 
 }
