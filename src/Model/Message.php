@@ -137,7 +137,7 @@ class Message
 
     public function setFrom($address, $name = '')
     {
-        $this->to[] = new EmailAddress($address, $name);
+        $this->from = new EmailAddress($address, $name);
     }
 
     /**
@@ -168,12 +168,12 @@ class Message
 
     public function addBcc($address, $name = '')
     {
-        $this->to[] = new EmailAddress($address, $name);
+        $this->bcc[] = new EmailAddress($address, $name);
     }
 
     public function addCc($address, $name = '')
     {
-        $this->to[] = new EmailAddress($address, $name);
+        $this->cc[] = new EmailAddress($address, $name);
     }
 
     public function addAttachment(Attachment $attachment)
