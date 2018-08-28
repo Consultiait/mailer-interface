@@ -43,6 +43,15 @@ class Attachment
      */
     private $content_id;
 
+    public function __construct($filename, $type, $content, $disposition = null, $content_id = null)
+    {
+        $this->filename = $filename;
+        $this->type = $type;
+        $this->content = $content;
+        $this->disposition = $disposition;
+        $this->content_id = $content_id;
+    }
+
     /**
      * @return string
      */
