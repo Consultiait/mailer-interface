@@ -15,33 +15,36 @@ class Message
 {
     /**
      * @var EmailAddress[]
-     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     * @Serializer\Type("array<Mailer\Model\EmailAddress>")
      */
     private $to;
 
     /**
      * @var EmailAddress[]
-     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     * @Serializer\Type("array<Mailer\Model\EmailAddress>")
      */
     private $bcc;
 
     /**
      * @var EmailAddress[]
-     * @Serializer\Type("array<\Mailer\Model\EmailAddress>")
+     * @Serializer\Type("array<Mailer\Model\EmailAddress>")
      */
     private $cc;
 
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $subject;
 
     /**
-     * @Serializer\Type("\Mailer\Model\EmailAddress")
+     * @Serializer\Type("Mailer\Model\EmailAddress")
      */
     private $from;
 
     /**
      * @var Attachment[]
-     * @Serializer\Type("array<\Mailer\Model\Attachment>")
+     * @Serializer\Type("array<Mailer\Model\Attachment>")
      */
     private $attachments;
 
@@ -53,7 +56,7 @@ class Message
 
     /**
      * @var Content[]
-     * @Serializer\Type("array<\Mailer\Model\Content>")
+     * @Serializer\Type("array<Mailer\Model\Content>")
      */
     private $contents;
 

@@ -9,15 +9,23 @@
 namespace Mailer\Model;
 
 
+use JMS\Serializer\Annotation as Serializer;
+
 class Content
 {
     const HTML = 'text/html';
     const PLAIN = 'text/plain';
 
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $type;
 
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $value;
 
     public function __construct($value, $type)

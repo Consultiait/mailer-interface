@@ -9,21 +9,38 @@
 namespace Mailer\Model;
 
 
+use JMS\Serializer\Annotation as Serializer;
+
 class Attachment
 {
-    /** @var $content string */
+    /**
+     * @var $content string
+     * @Serializer\Type("string")
+     */
     private $content;
 
-    /** @var $type string */
+    /**
+     * @var $type string
+     * @Serializer\Type("string")
+     */
     private $type;
 
-    /** @var $filename string */
+    /**
+     * @var $filename string
+     * @Serializer\Type("string")
+     */
     private $filename;
 
-    /** @var $disposition string */
+    /**
+     * @var $disposition string
+     * @Serializer\Type("string")
+     */
     private $disposition;
 
-    /** @var $content_id string */
+    /**
+     * @var $content_id string
+     * @Serializer\Type("string")
+     */
     private $content_id;
 
     /**

@@ -9,12 +9,20 @@
 namespace Mailer\Model;
 
 
+use JMS\Serializer\Annotation as Serializer;
+
 class EmailAddress
 {
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $address;
 
-    /** @var string */
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
     private $name;
 
     public function __construct($address, $name = '')
