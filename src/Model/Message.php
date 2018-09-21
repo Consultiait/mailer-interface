@@ -167,7 +167,7 @@ class Message
         $this->cc[] = new EmailAddress($address, $name);
     }
 
-    public function addAttachment($filename, $type, $content, $disposition = null, $content_id = null)
+    public function addAttachment($filename, $type, $content, $disposition = Attachment::ATTACHMENT, $content_id = null)
     {
         $this->attachments[] = new Attachment($filename, $type, $content, $disposition, $content_id);
     }
