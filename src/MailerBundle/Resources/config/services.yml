@@ -1,0 +1,7 @@
+services:
+  consultia_mailer.provider:
+    class: Mailer\MailerBundle\Provider\MailerProvider
+    arguments:
+    - '@%consultia_mailer.producer%'
+    - '@jms_serializer.serializer'
+    public: true

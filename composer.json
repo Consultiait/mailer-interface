@@ -17,6 +17,7 @@
         }
     },
     "require-dev": {
-        "jms/serializer-bundle": "^2.4"
+        "jms/serializer-bundle": "^2.4",
+        "php-amqplib/rabbitmq-bundle": "^1.14"
     }
 }
