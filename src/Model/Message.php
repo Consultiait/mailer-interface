@@ -112,10 +112,13 @@ class Message
 
     /**
      * @param string $subject
+     * @return $this
      */
     public function setSubject($subject)
     {
         $this->subject = $subject;
+
+        return $this;
     }
 
     /**
@@ -129,6 +132,8 @@ class Message
     public function setFrom($address, $name = '')
     {
         $this->from = new EmailAddress($address, $name);
+
+        return $this;
     }
 
     /**
@@ -150,26 +155,36 @@ class Message
     public function addTag($tag)
     {
         $this->tags[] = $tag;
+
+        return $this;
     }
 
     public function addTo($address, $name = '')
     {
         $this->to[] = new EmailAddress($address, $name);
+
+        return $this;
     }
 
     public function addBcc($address, $name = '')
     {
         $this->bcc[] = new EmailAddress($address, $name);
+
+        return $this;
     }
 
     public function addCc($address, $name = '')
     {
         $this->cc[] = new EmailAddress($address, $name);
+
+        return $this;
     }
 
     public function addAttachment($filename, $type, $content, $disposition = Attachment::ATTACHMENT, $content_id = null)
     {
         $this->attachments[] = new Attachment($filename, $type, $content, $disposition, $content_id);
+
+        return $this;
     }
 
     public function getContents()
@@ -180,5 +195,7 @@ class Message
     public function addContent($value, $type)
     {
         $this->contents[] = new Content($value, $type);
+
+        return $this;
     }
 }
