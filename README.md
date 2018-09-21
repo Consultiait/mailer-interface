@@ -1,5 +1,15 @@
 Przykład:
 
+Instalacja:
+```
+composer require consultiait/mailer-interface
+```
+
+Kernel:
+```php
+new Mailer\MailerBundle\MailerBundle(),
+```
+
 Konfiguracja:
 
 ```yaml
