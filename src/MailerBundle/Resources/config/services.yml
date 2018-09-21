@@ -2,6 +2,6 @@ services:
   consultia_mailer.provider:
     class: Mailer\MailerBundle\Provider\MailerProvider
     arguments:
-    - "@='old_sound_rabbit_mq.'~parameter('consultia_mailer.producer')~'_producer'"
+    - "@=service('old_sound_rabbit_mq.'~parameter('consultia_mailer.producer')~'_producer')"
     - '@jms_serializer.serializer'
     public: true
