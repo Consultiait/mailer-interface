@@ -13,6 +13,9 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Attachment
 {
+    const ATTACHMENT = 'attachment';
+    const INLINE = 'inline';
+
     /**
      * @var $content string
      * @Serializer\Type("string")
