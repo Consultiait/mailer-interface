@@ -3,7 +3,8 @@ Przykład:
 Konfiguracja:
 
 ```yaml
-
+consultia_mailer:
+   producer: 'name_of_rabbitmq_producer'
 ```
 
 ```php
