@@ -1,6 +1,6 @@
 <?php
 
-namespace OG\SendGridBundle;
+namespace Mailer\MailerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
