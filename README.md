@@ -1,5 +1,11 @@
 Przykład:
 
+Konfiguracja:
+
+```yaml
+
+```
+
 ```php
 $message = new Message();
 $message->setFrom('o.gunther@test.pl');
